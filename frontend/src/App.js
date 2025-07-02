@@ -549,6 +549,270 @@ function App() {
     </section>
   );
 
+  const VisaRequirements = () => (
+    <section id="visa" className="section section-visa">
+      <div className="section-container">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="section-header"
+        >
+          <h2 className="section-title">
+            Visa
+            <span className="hero-gradient-text"> Requirements</span>
+          </h2>
+          <p className="section-subtitle">
+            Essential visa information and assistance to make your journey to Eswatini seamless
+          </p>
+        </motion.div>
+
+        {/* Visa Free Countries */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="visa-free-section"
+        >
+          <h3 className="visa-section-title">No Visa Required</h3>
+          <p className="visa-description">
+            Citizens from over 90 countries can enter Eswatini without a visa for tourism or business purposes
+          </p>
+          
+          <div className="visa-countries-grid">
+            {[
+              { region: "Africa", countries: ["South Africa (30 days)", "Botswana", "Namibia", "Mauritius", "Kenya", "Tanzania"] },
+              { region: "Europe", countries: ["United Kingdom (30 days)", "Germany", "France", "Italy", "Spain", "Netherlands"] },
+              { region: "Americas", countries: ["United States (30 days)", "Canada", "Brazil", "Argentina", "Jamaica", "Barbados"] },
+              { region: "Asia & Oceania", countries: ["Singapore", "Malaysia", "South Korea", "Australia", "New Zealand", "Japan"] }
+            ].map((region, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="visa-region-card"
+              >
+                <h4 className="region-title">{region.region}</h4>
+                <ul className="countries-list">
+                  {region.countries.map((country, i) => (
+                    <li key={i} className="country-item">
+                      <CheckCircle size={16} className="check-icon" />
+                      {country}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* eVisa Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="evisa-section"
+        >
+          <h3 className="visa-section-title">Electronic Visa (eVisa)</h3>
+          <p className="visa-description">
+            Fast and convenient online visa application for eligible travelers
+          </p>
+
+          <div className="evisa-types">
+            {[
+              {
+                type: "Tourist eVisa",
+                icon: <Camera className="visa-type-icon" />,
+                duration: "30 days stay",
+                validity: "90 days from issue",
+                processing: "2-5 business days",
+                requirements: [
+                  "Valid passport (6+ months)",
+                  "Passport photo",
+                  "Flight tickets",
+                  "Accommodation proof"
+                ]
+              },
+              {
+                type: "Business eVisa",
+                icon: <Globe className="visa-type-icon" />,
+                duration: "30 days stay", 
+                validity: "90 days from issue",
+                processing: "2-5 business days",
+                requirements: [
+                  "Valid passport (6+ months)",
+                  "Passport photo",
+                  "Invitation letter",
+                  "Bank statements",
+                  "Travel itinerary"
+                ]
+              }
+            ].map((visa, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                className="evisa-card"
+              >
+                <div className="evisa-header">
+                  <div className="visa-icon-container">
+                    {visa.icon}
+                  </div>
+                  <h4 className="evisa-title">{visa.type}</h4>
+                </div>
+                
+                <div className="evisa-details">
+                  <div className="detail-item">
+                    <span className="detail-label">Duration:</span>
+                    <span className="detail-value">{visa.duration}</span>
+                  </div>
+                  <div className="detail-item">
+                    <span className="detail-label">Validity:</span>
+                    <span className="detail-value">{visa.validity}</span>
+                  </div>
+                  <div className="detail-item">
+                    <span className="detail-label">Processing:</span>
+                    <span className="detail-value">{visa.processing}</span>
+                  </div>
+                </div>
+
+                <div className="requirements-section">
+                  <h5 className="requirements-title">Required Documents:</h5>
+                  <ul className="requirements-list">
+                    {visa.requirements.map((req, i) => (
+                      <li key={i} className="requirement-item">
+                        <CheckCircle size={14} className="req-check" />
+                        {req}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Visa Assistance */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="visa-assistance"
+        >
+          <h3 className="visa-section-title">Visa Assistance Services</h3>
+          <p className="visa-description">
+            Let us help you navigate the visa process with our professional assistance
+          </p>
+
+          <div className="assistance-services">
+            {[
+              {
+                service: "Document Review",
+                description: "We check your documents before submission to ensure everything is correct",
+                icon: <CheckCircle className="service-icon" />
+              },
+              {
+                service: "Application Support",
+                description: "Step-by-step guidance through the eVisa application process",
+                icon: <Users className="service-icon" />
+              },
+              {
+                service: "Status Tracking",
+                description: "We monitor your application status and keep you updated",
+                icon: <Globe className="service-icon" />
+              },
+              {
+                service: "Emergency Processing",
+                description: "Expedited processing for urgent travel requirements",
+                icon: <Calendar className="service-icon" />
+              }
+            ].map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="assistance-card"
+              >
+                <div className="service-icon-container">
+                  {service.icon}
+                </div>
+                <h4 className="service-title">{service.service}</h4>
+                <p className="service-description">{service.description}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="visa-cta-section">
+            <div className="visa-cta-content">
+              <h4 className="cta-title">Need Visa Assistance?</h4>
+              <p className="cta-description">
+                Our travel experts are ready to help you with your visa application and ensure a smooth process
+              </p>
+              <div className="visa-cta-buttons">
+                <motion.a
+                  href={`https://wa.me/+2687654321?text=Hi! I need help with my Eswatini visa application`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="visa-btn-primary"
+                >
+                  <MessageCircle size={20} />
+                  Get Visa Help
+                </motion.a>
+                <motion.a
+                  href="https://evisa.gov.sz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="visa-btn-secondary"
+                >
+                  <Globe size={20} />
+                  Apply Online
+                </motion.a>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Important Notes */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="visa-notes"
+        >
+          <h3 className="notes-title">Important Notes</h3>
+          <div className="notes-grid">
+            <div className="note-item">
+              <Heart className="note-icon" />
+              <div>
+                <h4 className="note-title">Health Requirements</h4>
+                <p className="note-text">Yellow fever vaccination required from risk areas</p>
+              </div>
+            </div>
+            <div className="note-item">
+              <Calendar className="note-icon" />
+              <div>
+                <h4 className="note-title">Processing Time</h4>
+                <p className="note-text">Apply at least 1 week before travel for eVisa</p>
+              </div>
+            </div>
+            <div className="note-item">
+              <CheckCircle className="note-icon" />
+              <div>
+                <h4 className="note-title">Extensions</h4>
+                <p className="note-text">eVisas cannot be extended - plan accordingly</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+
   const Contact = () => (
     <section id="contact" className="section section-contact">
       <div className="contact-background">
