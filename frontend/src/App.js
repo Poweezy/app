@@ -807,6 +807,216 @@ function App() {
     </section>
   );
 
+  const Contact = () => (
+    <section id="contact" className="py-20 bg-gradient-to-b from-black to-slate-900 relative">
+      <div className="absolute inset-0">
+        <img 
+          src="https://images.unsplash.com/photo-1586031489655-c933704cffae"
+          alt="African sunset"
+          className="w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-black/70"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Start Your
+            <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent"> Journey</span>
+          </h2>
+          <p className="text-xl text-white/80 max-w-3xl mx-auto">
+            Ready to experience the magic of Eswatini? Contact us today to plan your unforgettable adventure.
+          </p>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="space-y-8">
+              <motion.a
+                href={`https://wa.me/+2687654321?text=Hello! I'm interested in planning a trip to Eswatini`}
+                whileHover={{ scale: 1.02 }}
+                className="flex items-center gap-6 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 hover:border-white/40 transition-all duration-300"
+              >
+                <div className="bg-green-500 p-4 rounded-full">
+                  <MessageCircle className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-1">WhatsApp</h3>
+                  <p className="text-white/70">+268 7654 3210</p>
+                  <p className="text-green-400 text-sm">Click to chat instantly</p>
+                </div>
+              </motion.a>
+
+              <div className="flex items-center gap-6 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                <div className="bg-blue-500 p-4 rounded-full">
+                  <Mail className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-1">Email</h3>
+                  <p className="text-white/70">info@discovereswatini.com</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-6 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
+                <div className="bg-orange-500 p-4 rounded-full">
+                  <MapPin className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-1">Location</h3>
+                  <p className="text-white/70">Mbabane, Eswatini</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/20"
+          >
+            <h3 className="text-2xl font-bold text-white mb-6">Quick Inquiry</h3>
+            <form className="space-y-6">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:border-orange-400 focus:outline-none transition-colors"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:border-orange-400 focus:outline-none transition-colors"
+                />
+              </div>
+              <div>
+                <select className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:border-orange-400 focus:outline-none transition-colors">
+                  <option value="">Select Experience</option>
+                  <option value="cultural">Cultural Tours</option>
+                  <option value="safari">Safari Adventures</option>
+                  <option value="luxury">Luxury Retreats</option>
+                  <option value="adventure">Adventure Activities</option>
+                  <option value="business">Business Travel</option>
+                </select>
+              </div>
+              <div>
+                <textarea
+                  placeholder="Tell us about your dream trip..."
+                  rows="4"
+                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:border-orange-400 focus:outline-none transition-colors resize-none"
+                ></textarea>
+              </div>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                type="submit"
+                className="w-full bg-gradient-to-r from-orange-500 to-red-600 text-white py-4 rounded-xl font-semibold hover:shadow-2xl transition-all duration-300"
+              >
+                Send Inquiry
+              </motion.button>
+            </form>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+
+  const Footer = () => (
+    <footer className="bg-black border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid md:grid-cols-4 gap-12">
+          <div>
+            <h3 className="text-2xl font-bold text-white mb-6">Discover Eswatini</h3>
+            <p className="text-white/70 mb-6 leading-relaxed">
+              Your gateway to experiencing the heart of Africa. Authentic culture, 
+              incredible wildlife, and luxury accommodations await.
+            </p>
+            <div className="flex space-x-4">
+              <motion.a
+                href="#"
+                whileHover={{ scale: 1.1 }}
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+              >
+                <Facebook size={20} className="text-white" />
+              </motion.a>
+              <motion.a
+                href="#"
+                whileHover={{ scale: 1.1 }}
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+              >
+                <Instagram size={20} className="text-white" />
+              </motion.a>
+              <motion.a
+                href="#"
+                whileHover={{ scale: 1.1 }}
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+              >
+                <Twitter size={20} className="text-white" />
+              </motion.a>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-6">Experiences</h4>
+            <ul className="space-y-3">
+              {['Reed Dance Ceremony', 'Big Five Safaris', 'Cultural Villages', 'Luxury Lodges', 'Adventure Tours'].map((item) => (
+                <li key={item}>
+                  <a href="#" className="text-white/70 hover:text-white transition-colors">{item}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-6">Destinations</h4>
+            <ul className="space-y-3">
+              {['Hlane Royal Park', 'Mlilwane Sanctuary', 'Mkhaya Reserve', 'Malolotja Reserve', 'Mantenga Village'].map((item) => (
+                <li key={item}>
+                  <a href="#" className="text-white/70 hover:text-white transition-colors">{item}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-6">Contact Info</h4>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <Phone size={16} className="text-orange-400" />
+                <span className="text-white/70">+268 7654 3210</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail size={16} className="text-orange-400" />
+                <span className="text-white/70">info@discovereswatini.com</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <MapPin size={16} className="text-orange-400" />
+                <span className="text-white/70">Mbabane, Eswatini</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-white/10 mt-12 pt-8 text-center">
+          <p className="text-white/50">
+            © 2025 Discover Eswatini. All rights reserved. | Privacy Policy | Terms of Service
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+
   return (
     <div className="bg-black text-white min-h-screen">
       <Navigation />
@@ -815,6 +1025,8 @@ function App() {
       <CulturalHeritage />
       <Wildlife />
       <Luxury />
+      <Contact />
+      <Footer />
     </div>
   );
 }
