@@ -1031,6 +1031,7 @@ function App() {
       <CulturalHeritage />
       <Wildlife />
       <Luxury />
+      <VisaRequirements />
       <Contact />
       <Footer />
     </div>
