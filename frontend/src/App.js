@@ -55,7 +55,7 @@ function App() {
           
           {/* Desktop Menu */}
           <div className="nav-menu">
-            {['Experiences', 'Culture', 'Wildlife', 'Luxury', 'Contact'].map((item) => (
+            {['Experiences', 'Culture', 'Wildlife', 'Luxury', 'Visa', 'Contact'].map((item) => (
               <motion.a
                 key={item}
                 href={`#${item.toLowerCase()}`}
@@ -93,7 +93,7 @@ function App() {
               exit={{ opacity: 0, height: 0 }}
               className="mobile-menu"
             >
-              {['Experiences', 'Culture', 'Wildlife', 'Luxury', 'Contact'].map((item) => (
+              {['Experiences', 'Culture', 'Wildlife', 'Luxury', 'Visa', 'Contact'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
