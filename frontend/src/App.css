@@ -1390,6 +1390,27 @@ html {
   .grid-sm-2 {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .visa-countries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .countries-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .evisa-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .assistance-services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .visa-cta-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1428,6 +1449,14 @@ html {
   .footer-content {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .evisa-types {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .notes-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (min-width: 1024px) {
@@ -1436,6 +1465,14 @@ html {
   }
   
   .footer-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .visa-countries-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .assistance-services {
     grid-template-columns: repeat(4, 1fr);
   }
 }
