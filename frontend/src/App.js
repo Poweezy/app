@@ -812,11 +812,9 @@ function App() {
       <Navigation />
       <Hero />
       <Experiences />
-      
-      {/* Add more sections here */}
-      <div className="h-96 bg-slate-900 flex items-center justify-center">
-        <p className="text-white/60 text-lg">More sections coming soon...</p>
-      </div>
+      <CulturalHeritage />
+      <Wildlife />
+      <Luxury />
     </div>
   );
 }
