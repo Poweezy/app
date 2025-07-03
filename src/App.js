@@ -302,7 +302,7 @@ function App() {
       <div className="culture-background">
         <div className="culture-bg-overlay"></div>
         <img 
-          src="/cultural village.png"
+          src="/cultural-village.png"
           alt="Cultural dance"
           className="culture-bg-image"
         />
@@ -499,7 +499,7 @@ function App() {
               amenities: ["5-star service", "Gourmet dining", "Spa treatments", "Game viewing decks"]
             },
             {
-              image: "/mbuluzi tented cmp.png",
+              image: "/mbuluzi-tented-camp.png",
               title: "Tented Camps",
               description: "Elegant tented accommodations for an authentic safari experience",
               amenities: ["Private bathrooms", "Air conditioning", "Butler service", "Private terraces"]
