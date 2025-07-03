@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/app/static/css/main.bd64c720.css",
-    "main.js": "/app/static/js/main.d6b0db56.js",
-    "static/media/sunset.png": "/app/static/media/sunset.3f232cf6a6c74fa917be.png",
-    "index.html": "/app/index.html"
+    "main.css": "/travel_website/static/css/main.036a60e0.css",
+    "main.js": "/travel_website/static/js/main.d6b0db56.js",
+    "static/media/sunset.png": "/travel_website/static/media/sunset.3f232cf6a6c74fa917be.png",
+    "index.html": "/travel_website/index.html"
   },
   "entrypoints": [
-    "static/css/main.bd64c720.css",
+    "static/css/main.036a60e0.css",
     "static/js/main.d6b0db56.js"
   ]
 }
