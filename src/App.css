@@ -162,7 +162,7 @@ html {
 .hero-background {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1636871694216-d04517e0d1c2');
+  background-image: url('/public/sunset.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

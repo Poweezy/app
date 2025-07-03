@@ -493,13 +493,13 @@ function App() {
         <div className="luxury-grid">
           {[
             {
-              image: "https://images.pexels.com/photos/18611231/pexels-photo-18611231.jpeg",
+              image: "/nisela.jpg",
               title: "Safari Lodges",
               description: "Luxury lodges with panoramic views of the African wilderness",
               amenities: ["5-star service", "Gourmet dining", "Spa treatments", "Game viewing decks"]
             },
             {
-              image: "https://images.unsplash.com/photo-1548182397-261253f88d4a",
+              image: "/mbuluzi tented cmp.png",
               title: "Tented Camps",
               description: "Elegant tented accommodations for an authentic safari experience",
               amenities: ["Private bathrooms", "Air conditioning", "Butler service", "Private terraces"]
