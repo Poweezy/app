@@ -258,7 +258,7 @@ function App() {
 
         <div className="grid grid-cols-1 grid-sm-2 grid-lg-3">
           <ExperienceCard
-            image="https://images.pexels.com/photos/32835391/pexels-photo-32835391.jpeg"
+            image="/reed-dance.png"
             title="Reed Dance Ceremony"
             description="Witness the sacred Umhlanga ceremony where thousands of maidens celebrate Swazi heritage in September"
             highlights={[
@@ -270,7 +270,7 @@ function App() {
           />
           
           <ExperienceCard
-            image="https://images.unsplash.com/photo-1551357246-9a602bac321e"
+            image="/rhino.jpeg"
             title="Big Five Safaris"
             description="Encounter elephants, lions, rhinos, leopards and buffalo in pristine national parks"
             highlights={[
@@ -282,7 +282,7 @@ function App() {
           />
           
           <ExperienceCard
-            image="https://images.unsplash.com/photo-1548182397-261253f88d4a"
+            image="/hilton.png"
             title="Luxury Accommodations"
             description="Stay in world-class lodges and luxury tented camps surrounded by African wilderness"
             highlights={[
@@ -302,7 +302,7 @@ function App() {
       <div className="culture-background">
         <div className="culture-bg-overlay"></div>
         <img 
-          src="https://images.pexels.com/photos/32739684/pexels-photo-32739684.jpeg"
+          src="/cultural village.png"
           alt="Cultural dance"
           className="culture-bg-image"
         />
@@ -379,13 +379,13 @@ function App() {
           >
             <motion.img
               whileHover={{ scale: 1.05 }}
-              src="https://images.unsplash.com/photo-1603703182693-51a19941fa59"
+              src="/umhlanga.jpg"
               alt="Traditional attire"
               className="culture-image"
             />
             <motion.img
               whileHover={{ scale: 1.05 }}
-              src="https://images.pexels.com/photos/3764310/pexels-photo-3764310.jpeg"
+              src="/incwala.jpg"
               alt="Cultural performance"
               className="culture-image"
             />
@@ -421,7 +421,7 @@ function App() {
             className="wildlife-image-container"
           >
             <img
-              src="https://images.unsplash.com/photo-1721172964531-62ad73c87e27"
+              src="/hlane.jpg"
               alt="Elephant herd"
               className="wildlife-image"
             />
